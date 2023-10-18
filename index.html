@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dynamic Form</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Dynamic Form</h2>
+        <form id="dynamic-form">
+            <!-- Name Field -->
+            <div class="input-group" id="name-group">
+                <label for="name">Name:</label>
+                <input type="text" class="name" name="name[]">
+                <button type="button" class="remove-btn">Remove</button>
+            </div>
+            <button type="button" class="add-btn" data-target="name-group">Add Name</button>
+
+            <!-- Contact Field -->
+            <div class="input-group" id="contact-group">
+                <label for="contact">Contact Number:</label>
+                <input type="text" class="contact" name="contact[]">
+                <button type="button" class="remove-btn">Remove</button>
+            </div>
+            <button type="button" class="add-btn" data-target="contact-group">Add Contact</button>
+
+            <!-- Email Field -->
+            <div class="input-group" id="email-group">
+                <label for="email">Email:</label>
+                <input type="email" class="email" name="email[]">
+                <button type="button" class="remove-btn">Remove</button>
+            </div>
+            <button type="button" class="add-btn" data-target="email-group">Add Email</button>
+
+            <!-- Hobby Field -->
+            <div class="input-group" id="hobby-group">
+                <label for="hobby">Hobby:</label>
+                <div class="hobby-dropdown">
+                    <select class="hobby" name="hobby[]">
+                        <option value="reading">Reading</option>
+                        <option value="traveling">Traveling</option>
+                        <option value="sports">Sports</option>
+                        <option value="music">Music</option>
+                        <option value="gaming">Gaming</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Interests Field -->
+            <div class="input-group" id="interests-group">
+                <label for="interests">Interests:</label>
+                <input type="text" class="interests" name="interests[]">
+                <button type="button" class="remove-btn">Remove</button>
+            </div>
+            <button type="button" class="add-btn" data-target="interests-group">Add Interests</button>
+
+            <!-- Blood Group Field -->
+            <div class="input-group" id="blood-group-group">
+                <label for="blood-group">Blood Group:</label>
+                <div class="blood-group-dropdown">
+                    <select class="blood-group" name="blood-group[]">
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="O+">O+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="A-">A-</option>
+                        <option value="B-">B-</option>
+                        <option value="O-">O-</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Career Goals Field -->
+            <div class="input-group" id="career-goals-group">
+                <label for="career-goals">Career Goals:</label>
+                <textarea class="career-goals" name="career-goals[]"></textarea>
+                <button type="button" class="remove-btn">Remove</button>
+            </div>
+            <button type="button" class="add-btn" data-target="career-goals-group">Add Career Goals</button>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
